@@ -39,6 +39,15 @@ print("This is the last character: " + greeting[-1])
 # reverse string -> [::-1]
 print("This is the reversed string: " + greeting[::-1])
 
+# string length
+print("This is the length: " + str(len(greeting)))
+
+# built-in methods for strings
+print("Convert to upper case: " + greeting.upper())
+print("Capitalize first letter: " + greeting.capitalize())
+print("Find an index of a letter (first occurrence): " + str(greeting.find('y')))
+print("Replace a letter/section: " + greeting.replace("Python", "Java"))
+
 # List -> list
 
 # Tuple -> tuple
