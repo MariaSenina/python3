@@ -1,60 +1,22 @@
-# Data Types
+age = input("How old are you? ")
 
-# Integer -> int
+if int(age) > 16:
+  is_old = True
+else:
+  is_old = False
 
-# Float -> float
-
-# Boolean -> bool
-
-# String -> str
-print(type("Hello"))
-
-username = "supercoder"
-password = "supersecret"
-
-some_long_string = '''
-WOW
-O O
----
-'''
-
-print(some_long_string)
-
-name = input("What is your name? ")
-year = input("What year were you born? ")
-
-age = 2022 - int(year)
-
-print(f'Hi {name}! You are {age} years old. \n')
-
-greeting = "Hello, Python!"
-print(greeting)
-print("This is the 1st letter: " + greeting[0])
-print("This is the 5th letter: " + greeting[4])
-print("This is the range of letters from 1 UNTIL 5: " + greeting[0:4])
-# [start:stop:step_over] -> NOTE: we can skip any part of this expression (defaults - 0:<end>:1)
-print("This is the range of letters with step_over: " + greeting[0:15:2])
-# negative index means "start at the end" (starts at -1)
-print("This is the last character: " + greeting[-1])
-# reverse string -> [::-1]
-print("This is the reversed string: " + greeting[::-1])
-
-# string length
-print("This is the length: " + str(len(greeting)))
-
-# built-in methods for strings
-print("Convert to upper case: " + greeting.upper())
-print("Capitalize first letter: " + greeting.capitalize())
-print("Find an index of a letter (first occurrence): " + str(greeting.find('y')))
-print("Replace a letter/section: " + greeting.replace("Python", "Java"))
-
-# List -> list
-
-# Tuple -> tuple
-
-# Set -> set
-
-# Dictionary -> dict
+licenced = input("Do you have a licence? ")
+if licenced.casefold() == "yes":
+  is_licenced = True
+else:
+  is_licenced = False
 
 
-#Null? -> None
+if is_old and is_licenced:
+  print("You are ready to drive!")
+elif is_old:
+  print("You are old enough to drive! But you don't have a valid licence...")
+elif is_licenced:
+  print("You have a valid licence! But you aren't old enough...")
+else:
+  print("Sorry, you are not allowed to drive...")
